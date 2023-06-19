@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "app-breadcrumb": {
-      "projectType": "application",
+      "projectType": "library",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
@@ -96,6 +96,40 @@
           }
         }
       }
+    },
+    "ngx-breadcrumb-next": {
+      "projectType": "library",
+      "root": "projects/ngx-breadcrumb-next",
+      "sourceRoot": "projects/ngx-breadcrumb-next/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-breadcrumb-next/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-breadcrumb-next/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-breadcrumb-next/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-breadcrumb-next/src/test.ts",
+            "tsConfig": "projects/ngx-breadcrumb-next/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-breadcrumb-next/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

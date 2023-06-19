@@ -1,0 +1,36 @@
+:host {
+  --text-primary: #0d47a1;
+  --text-secondary: #545b62;
+  --bs-breadcrumb-divider: "/";
+}
+ol.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 25px;
+  list-style: none;
+  background-color: transparent;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+ol.breadcrumb li:last-child {
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+ol.breadcrumb li:not(:last-child) {
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #545b62;
+  content: var(--bs-breadcrumb-divider, "/");
+}
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+.breadcrumb-item {
+    line-height: 1.5;
+    font-size: 0.9375rem;
+}

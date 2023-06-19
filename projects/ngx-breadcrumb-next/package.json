@@ -1,0 +1,17 @@
+{
+  "name": "ngx-breadcrumb-next",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "author": {
+    "name": "David Segura Payá",
+    "email": "wolf.arges@gmail.com",
+    "url": "https://github.com/DavidSegura/ngx-breadcrumb-next"
+  },
+  "keywords": [ "angular", "breadcrumb"]
+}

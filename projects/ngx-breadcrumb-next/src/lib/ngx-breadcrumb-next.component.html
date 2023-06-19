@@ -1,0 +1,7 @@
+<ol class="breadcrumb">
+  <ng-container *ngFor="let breadcrumb of breadcrumbs$ | async">
+    <li [routerLink]="breadcrumb.url" class="breadcrumb-item" aria-page="page">
+      {{ breadcrumb.label }}
+    </li>
+  </ng-container>
+</ol>
