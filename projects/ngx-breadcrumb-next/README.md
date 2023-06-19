@@ -1,6 +1,6 @@
 ## Versions
 
-| Angular          | ng-select |
+| Angular          | ngx-breadcrumb-next |
 |------------------|:---------:|
 | >=14.0.0 =16.0.0 |   v1.x    |
 
