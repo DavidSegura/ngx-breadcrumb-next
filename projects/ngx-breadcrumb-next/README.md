@@ -1,24 +1,34 @@
-# NgxBreadcrumbNext
+## Versions
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+| Angular          | ng-select |
+|------------------|:---------:|
+| >=14.0.0 =16.0.0 |   v1.x    |
 
-## Code scaffolding
+## Getting started
+### Step 1: Install `ngx-breadcrumb-next`:
 
-Run `ng generate component component-name --project ngx-breadcrumb-next` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-breadcrumb-next`.
-> Note: Don't forget to add `--project ngx-breadcrumb-next` or else it will be added to the default project in your `angular.json` file. 
+#### NPM
+```shell
+npm install --save ngx-breadcrumb-next
+```
 
-## Build
+### Step 2: Import the NgxBreadcrumbNextModule and angular FormsModule module:
+```js
+import { NgxBreadcrumbNextModule } from 'ngx-breadcrumb-next';
+import { FormsModule } from '@angular/forms';
 
-Run `ng build ngx-breadcrumb-next` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  declarations: [AppComponent],
+  imports: [NgxBreadcrumbNextModule, FormsModule],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-## Publishing
+### Usage
+In template use `ngx-breadcrumb-next` component with your options
 
-After building your library with `ng build ngx-breadcrumb-next`, go to the dist folder `cd dist/ngx-breadcrumb-next` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-breadcrumb-next` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```html
+<!--Using ng-option and for loop-->
+<ngx-breadcrumb-next></ngx-breadcrumb-next>
+```
